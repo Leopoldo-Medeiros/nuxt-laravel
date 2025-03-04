@@ -1,0 +1,45 @@
+name: laravel-nuxt
+services:
+  appserver:
+    type: php:8.3
+    build_as_root:
+      - apt-get update -y
+      - apt-get install -y nodejs npm
+    environment:
+      MYSQL_VERSION: "8"
+    overrides:
+      working_dir: /app
+  database:
+    type: mysql:8.0
+  node:
+    type: node:20
+    ssl: true
+    healthcheck: false
+tooling:
+  install:
+    service: appserver
+    cmd:
+      - composer install --no-cache
+      - php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - php artisan key:generate
+      - php artisan migrate --seed
+      - npm install
+      - php artisan storage:link
+  setup:
+    service: appserver
+    cmd:
+      - composer install --no-cache
+      - php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - php artisan key:generate
+      - php artisan migrate --seed
+      - npm install
+      - php artisan storage:link
+  tinker:
+    service: appserver
+    cmd: php artisan tinker
+  migrate:
+    service: appserver
+    cmd: php artisan migrate
+  rollback:
+    service: appserver
+    cmd: php artisan migrate:rollback --step=1
