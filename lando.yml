@@ -1,0 +1,49 @@
+name: nuxt-laravel
+recipe: lamp
+config:
+  php: '8.2'
+  webroot: backend/public
+  database: mysql:8.0
+  xdebug: true
+
+services:
+  appserver:
+    type: php:8.2
+    build:
+      - composer install
+    webroot: backend/public
+    xdebug: true
+    config:
+      php: backend/php.ini
+
+  node:
+    type: node:18
+    build:
+      - cd /app/client && npm install
+    command: cd /app/client && npm run dev
+    globals:
+      yarn: latest
+    ports:
+      - "3000"
+
+  database:
+    type: mysql:8.0
+    portforward: true
+    creds:
+      user: laravel
+      password: laravel
+      database: laravel
+
+tooling:
+  artisan:
+    service: appserver
+    cmd: php /app/backend/artisan
+  composer:
+    service: appserver
+    cmd: composer
+  npm:
+    service: node
+    cmd: npm
+  yarn:
+    service: node
+    cmd: yarn 
