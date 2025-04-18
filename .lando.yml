@@ -1,26 +1,31 @@
 name: nuxt-laravel
-recipe: compose
-# Disable the Laravel recipe and use compose instead
+recipe: laravel
+config:
+  php: '8.2'
+  webroot: backend/public
+  via: nginx
+  database: mysql:8.0
+  xdebug: false
+
 services:
   node:
     type: node:18
-    ssl: false
-    healthcheck: false
-    port: 3000
+    port: 80
     build:
       - cd /app/client && npm install
-    command: cd /app/client && npm run dev -- --host 0.0.0.0 --port 3000
+    command: cd /app/client && npm run dev -- --host 0.0.0.0 --port 80
 
 proxy:
   node:
-    - nuxt-laravel.lndo.site:3000
-    - localhost:3000
+    - nuxt-laravel.lndo.site
+  appserver:
+    - api.nuxt-laravel.lndo.site
 
 tooling:
   nuxt:
     service: node
-    cmd: cd /app/client && npm run dev -- --host 0.0.0.0 --port 3000
-    
+    cmd: cd /app/client && npm run dev -- --host 0.0.0.0 --port 80
+
   npm:
     service: node
     cmd: cd /app/client && npm

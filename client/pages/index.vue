@@ -13,9 +13,9 @@
       </div>
       
       <div class="rounded-lg bg-white p-6 shadow-md">
-        <h2 class="mb-4 text-xl font-semibold">Welcome to your Nuxt Laravel Application</h2>
+        <h2 class="mb-4 text-xl font-semibold">Welcome to Nuxt Laravel Application</h2>
         <p class="text-gray-700">
-          This is a starter template for a Nuxt.js frontend with a Laravel backend.
+          Nuxt.js and Laravel project.
         </p>
       </div>
     </div>
