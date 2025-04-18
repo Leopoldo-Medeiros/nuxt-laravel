@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2df5d609-edb4-4cf9-ba47-a559e27c1355" name="Changes" comment="Nuxt Structure">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.lando.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.lando.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/bootstrap/providers.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bootstrap/providers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/sanctum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.vue" afterDir="false" />
-    </list>
+    <list default="true" id="2df5d609-edb4-4cf9-ba47-a559e27c1355" name="Changes" comment="WIP - Authenticating with Fortify" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +12,9 @@
   </component>
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/backend/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,6 +162,9 @@
       <path value="$PROJECT_DIR$/backend/vendor/bacon/bacon-qr-code" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -219,7 +213,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744935215459</updated>
       <workItem from="1744935216814" duration="38000" />
-      <workItem from="1744935263664" duration="7394000" />
+      <workItem from="1744935263664" duration="7713000" />
     </task>
     <task id="LOCAL-00001" summary="Nuxt Structure">
       <option name="closed" value="true" />
@@ -229,7 +223,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744985586537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="WIP - Authenticating with Fortify">
+      <option name="closed" value="true" />
+      <created>1744993757007</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744993757007</updated>
+    </task>
+    <task id="LOCAL-00003" summary="WIP - Authenticating with Fortify">
+      <option name="closed" value="true" />
+      <created>1744993765109</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744993765109</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +247,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Nuxt Structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuxt Structure" />
+    <MESSAGE value="WIP - Authenticating with Fortify" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP - Authenticating with Fortify" />
   </component>
 </project>
